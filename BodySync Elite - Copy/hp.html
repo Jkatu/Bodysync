@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BobySync Elite</title>
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1">
+
+    <div id="chatbox">
+    <div id="messages"></div>
+    <input type="text" id="userInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+</div>
+<head>
+
+<body>
+<style>
+#chatbox {
+    width: 300px;
+    height: 400px;
+    border: 1px solid black;
+    padding: 10px;
+    background-image: url("img/chat_image.jpg");
+    background-size: 100% 100%;
+}
+#messages {
+    height: 350px;
+    overflow-y: auto;
+}
+</style>
+
+<script>
+
+function sendMessage() {
+    var input = document.getElementById('userInput');
+    var messages = document.getElementById('messages');
+    var message = document.createElement('div');
+    message.textContent = input.value;
+    messages.appendChild(message);
+    input.value = '';
+}
+</script>
+</body>
+<html>
+
+
